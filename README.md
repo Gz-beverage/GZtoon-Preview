@@ -4,7 +4,7 @@
 
 Character shading for Unity URP with a full diffuse Ramp workflow, standard material maps, face SDF and UV-driven hair highlights.
 
-[项目页面](https://xxt20021130-cpu.github.io/GZtoon-Preview/) · [下载版本](https://github.com/xxt20021130-cpu/GZtoon-Preview/releases) · [反馈问题](https://github.com/xxt20021130-cpu/GZtoon-Preview/issues)
+[项目页面](https://gz-beverage.github.io/GZtoon-Preview/) · [下载版本](https://github.com/Gz-beverage/GZtoon-Preview/releases) · [反馈问题](https://github.com/Gz-beverage/GZtoon-Preview/issues)
 
 ![GZtoon Preview 在 Unity 中的实际渲染](docs/images/preview.jpg)
 
@@ -13,7 +13,7 @@ Character shading for Unity URP with a full diffuse Ramp workflow, standard mate
 在 Unity 的 Package Manager 中选择 **Install package from git URL**，输入下面的地址。
 
 ```text
-https://github.com/xxt20021130-cpu/GZtoon-Preview.git#v0.1.0-preview.1
+https://github.com/Gz-beverage/GZtoon-Preview.git#v0.1.0-preview.1
 ```
 
 开发分支地址使用 `#main`。也可下载仓库 ZIP，解压后通过 Package Manager 的 **Install package from disk** 选择 `package.json`。

@@ -8,8 +8,8 @@
     "com.unity.render-pipelines.universal": "17.3.0"
   },
   "author": { "name": "GZtoon" },
-  "documentationUrl": "https://xxt20021130-cpu.github.io/GZtoon-Preview/",
-  "repository": { "type": "git", "url": "https://github.com/xxt20021130-cpu/GZtoon-Preview.git" },
+  "documentationUrl": "https://gz-beverage.github.io/GZtoon-Preview/",
+  "repository": { "type": "git", "url": "https://github.com/Gz-beverage/GZtoon-Preview.git" },
   "samples": [
     { "displayName": "Basic Demo", "description": "Generated material examples, a ready-to-open scene and a native URP Volume profile.", "path": "Samples~/BasicDemo" }
   ],
