@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GZtoon/Preview/Face
+  m_Shader: {fileID: 4800000, guid: 73043400cf57dda4489f8282e0a9e7d7, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampLightingTex:
+        m_Texture: {fileID: 2800000, guid: 3ead659078544224c826ba64a2a429ac, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RoughnessTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RoughnessTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RoughnessTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadingGradeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadingGradeMap1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecMask_STUV:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _faceSDF:
+        m_Texture: {fileID: 2800000, guid: 5ecb23d9e13dab74e8389b12d20b2ce6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AnisotropicOffset: 0
+    - _AnisotropicRange1: 1
+    - _AnisotropicSize: 0.1
+    - _AoStrength: 1
+    - _AoTexReversal2: 0
+    - _GZAlphaClip: 0
+    - _GZAlphaCutoff: 0.5
+    - _GZCCRampContrast: 1
+    - _GZCCRampEnabled: 0
+    - _GZCCRampExposure: 0
+    - _GZCCRampGamma: 1
+    - _GZCCRampHue: 0
+    - _GZCCRampSaturation: 1
+    - _GZDiffuseRampDitherEnabled: 0
+    - _GZDiffuseRampDitherStrength: 1
+    - _GZDiffuseRampEnabled: 1
+    - _GZDiffuseRampRow: 0.2
+    - _GZDiffuseRampRowMapEnabled: 0
+    - _GZFaceSDFMirrorUV: 0
+    - _GZHairUVControlEnabled: 0
+    - _GZHairUVHighlightEnabled: 1
+    - _GZOutlinePassEnabled: 1
+    - _GZShadingGradeMapEnabled: 0
+    - _Indirectdiffusereflectionintensity: 1
+    - _Indirectlightspecularintensity: 1
+    - _InvertSpecMask: 0
+    - _NOLRampEnd: 1
+    - _NOLRemapStart: 0.5
+    - _NormalScale: 1
+    - _RampLightingUvYRemapEnd: 1
+    - _RampLightingUvYRemapStart: 0
+    - _ShadingGradeMapApplyRange: 1
+    - _ShadingGradeMapInvertColor: 0
+    - _ShadingGradeMapInvertColor1: 0
+    - _ShadingGradeMapMidPointOffset: 0
+    - _ShadingGradeMapRemapEnd: 1
+    - _ShadingGradeMapRemapStart: 0
+    - _ShadingGradeMapStrength: 1
+    - _ShadowOffset: 0
+    - _ShadowOffset1: 0.03
+    - _Smoothness2: 0.65
+    - _Thickness1: 0.0075
+    - _metallic: 0
+    - _specTermIntensity: 0.2
+    m_Colors:
+    - _AoMask: {r: 1, g: 0, b: 0, a: 0}
+    - _AoMask2: {r: 0, g: 0, b: 1, a: 0}
+    - _AoMask4: {r: 1, g: 0, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 0.68, b: 0.46, a: 1}
+    - _Color1189: {r: 0.025, g: 0.025, b: 0.04, a: 1}
+    - _Color3: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FaceFrontDirWS: {r: 0, g: 0, b: 1, a: 0}
+    - _FaceRightDirWS: {r: 1, g: 0, b: 0, a: 0}
+    - _FaceUpDirWS: {r: 0, g: 1, b: 0, a: 0}
+    - _GZCCRampTint: {r: 1, g: 1, b: 1, a: 1}
+    - _HairHighlightColor: {r: 0.5, g: 0.45, b: 0.35, a: 1}
+    - _HairHighlightUVST: {r: 1, g: 1, b: 0, a: 0}
+    - _PBRShadowColor: {r: 0.12, g: 0.12, b: 0.14, a: 1}
+    - _RoughnessMask: {r: 1, g: 0, b: 0, a: 0}
+    - _ShadingGradeMapChannelMask: {r: 1, g: 0, b: 0, a: 0}
+    - _ShadingGradeMapChannelMask1: {r: 1, g: 0, b: 0, a: 0}
+    - _SpecMaskRGBA: {r: 1, g: 0, b: 0, a: 0}
+    - _Vector4: {r: 0, g: 0, b: 0, a: 0}
+    - _metallicMack: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

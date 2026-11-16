@@ -1,0 +1,6 @@
+{
+  "name": "GZToon.Preview.Runtime",
+  "rootNamespace": "GZToon.Preview",
+  "references": ["Unity.RenderPipelines.Core.Runtime", "Unity.RenderPipelines.Universal.Runtime"],
+  "autoReferenced": true
+}

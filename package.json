@@ -1,0 +1,17 @@
+{
+  "name": "com.gztoon.preview",
+  "version": "0.1.0-preview.1",
+  "displayName": "GZtoon Preview",
+  "description": "URP character shading with a complete diffuse Ramp, basic PBR, face SDF, UV hair highlights, outlines and native post-processing presets.",
+  "unity": "6000.3",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "17.3.0"
+  },
+  "author": { "name": "GZtoon" },
+  "documentationUrl": "https://xxt20021130-cpu.github.io/GZtoon-Preview/",
+  "repository": { "type": "git", "url": "https://github.com/xxt20021130-cpu/GZtoon-Preview.git" },
+  "samples": [
+    { "displayName": "Basic Demo", "description": "Generated material examples, a ready-to-open scene and a native URP Volume profile.", "path": "Samples~/BasicDemo" }
+  ],
+  "keywords": ["shader", "toon", "urp", "ramp", "character"]
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="GZtoon Preview — Unity URP 角色着色预览版，完整漫反射 Ramp、基础 PBR、脸部 SDF、头发 UV 高光和原生后处理。">
+    <meta property="og:title" content="GZtoon Preview">
+    <meta property="og:description" content="完整的漫反射 Ramp，基础的角色着色。Unity 6.3 / URP 17.3。">
+    <meta property="og:image" content="https://xxt20021130-cpu.github.io/GZtoon-Preview/images/preview.jpg">
+    <title>GZtoon Preview · Unity URP 角色着色</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="header shell">
+      <a class="brand" href="#"><span class="brand-mark">GZ</span><span>toon <span class="muted">/ Preview</span></span></a>
+      <nav aria-label="项目导航">
+        <a href="#features">功能</a><a href="#install">安装</a><a href="https://github.com/xxt20021130-cpu/GZtoon-Preview">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Unity 6.3 <span>·</span> URP 17.3</p>
+          <h1>GZtoon<br><span>Preview.</span></h1>
+          <p class="hero-description">完整的漫反射 Ramp，基础的角色着色。</p>
+          <p class="intro">把基础 PBR、脸部 SDF 与头发 UV 高光放进同一套清晰的材质流程。用少量参数，从明暗关系开始调整角色外观。</p>
+          <div class="actions">
+            <a class="button primary" href="#install">安装预览版 <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/xxt20021130-cpu/GZtoon-Preview">查看源码 <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="version">v0.1.0-preview.1 <span>·</span> MIT License</p>
+        </div>
+        <figure class="hero-visual">
+          <img src="images/preview.jpg" alt="Unity 中实际渲染的材质球、SDF 头部与 UV 头发高光示例" width="1440" height="900">
+          <figcaption>
+            <span>Unity 实际渲染</span><span>Base · Face · Hair</span>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="features shell" id="features">
+        <div class="section-heading">
+          <h2>从表面，到角色。</h2><p>三个材质入口，共享一套基础光照。</p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-label">BASE</span><h3>基础 PBR</h3><p>普通法线、粗糙度、金属度与 AO，结合 URP GGX、SH 环境光和反射探针。</p>
+            <ul>
+              <li>
+                完整漫反射 Ramp
+              </li>
+              <li>
+                主光、附加灯与原生阴影
+              </li>
+              <li>
+                基础描边与 Alpha 裁剪
+              </li>
+            </ul>
+          </article>
+          <article>
+            <span class="feature-label">FACE</span><h3>脸部 SDF</h3><p>基于头部前、右、上方向计算受光，提供左右镜像、明暗偏移和柔软度控制。</p>
+            <ul>
+              <li>
+                通用 SDF 阈值
+              </li>
+              <li>
+                独立的头部坐标绑定
+              </li>
+              <li>
+                接入共用 Ramp
+              </li>
+            </ul>
+          </article>
+          <article>
+            <span class="feature-label">HAIR</span><h3>UV 高光</h3><p>用贴图控制高光形状，通过 UV 缩放、平移与基础视角位移调整发束表现。</p>
+            <ul>
+              <li>
+                高光遮罩与通道选择
+              </li>
+              <li>
+                RG / BA UV 控制图
+              </li>
+              <li>
+                颜色与强度控制
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section class="ramp-section">
+        <div class="shell ramp-layout">
+          <div>
+            <p class="eyebrow">DIFFUSE RAMP</p><h2>明暗关系，<br>集中在一条色带里。</h2><p>固定 LOD 0 查表，配合区域遮罩、Y 选行与静态 IGN 抖动，让不同部位共用明确的明暗流程。</p>
+          </div>
+          <div class="ramp-details">
+            <img src="images/ramp.png" alt="默认 Ramp 的四组色带" class="ramp-image">
+            <div class="detail-grid">
+              <p><strong>输入</strong>明暗起终点、分级图、原生阴影与 AO</p><p><strong>查表</strong>固定 Y、Y 贴图、区域遮罩与抖动</p><p><strong>颜色</strong>曝光、色相、饱和度、对比度、Gamma 与染色</p><p><strong>后处理</strong>原生 Bloom、Neutral Tonemapping 与颜色调整</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="install shell" id="install">
+        <div class="section-heading">
+          <h2>安装到你的 URP 项目。</h2><p>通过 Unity Package Manager 导入预览版。</p>
+        </div>
+        <div class="install-grid">
+          <div>
+            <h3>从 Git URL 安装</h3><p>打开 Package Manager，选择 <b>Install package from git URL</b>，粘贴地址。</p>
+            <div class="code-box">
+              <code id="git-url">https://github.com/xxt20021130-cpu/GZtoon-Preview.git#v0.1.0-preview.1</code><button id="copy-url" type="button">复制地址</button>
+            </div>
+            <p class="copy-status" id="copy-status" aria-live="polite"></p><a class="text-link" href="https://github.com/xxt20021130-cpu/GZtoon-Preview/releases">下载版本 <span aria-hidden="true">↗</span></a>
+          </div>
+          <ol class="setup-steps">
+            <li>
+              <h3>创建材质</h3><p>Create → GZtoon Preview，选择 Base、Face 或 Hair，指定底色、材质贴图与 Ramp。</p>
+            </li>
+            <li>
+              <h3>配置描边与头部</h3><p>Tools → GZtoon Preview 安装描边。脸部通过 Preview Head Basis 绑定头部 Transform 与 Renderer。</p>
+            </li>
+            <li>
+              <h3>打开示例与后处理</h3><p>导入 Basic Demo，或创建基础 Volume，在原生 Inspector 中调整 Bloom、曝光和饱和度。</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="support shell">
+        <div>
+          <h2>源码与使用说明</h2><p>安装、贴图通道、SDF 绑定与示例场景的详细步骤都在仓库 README 中。</p>
+        </div>
+        <a class="button secondary" href="https://github.com/xxt20021130-cpu/GZtoon-Preview#readme">阅读文档 <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer class="shell">
+      <a class="brand" href="#">GZtoon <span class="muted">Preview</span></a><p>© 2026 GZ007 · MIT License</p><a href="https://github.com/xxt20021130-cpu/GZtoon-Preview/issues">反馈问题 ↗</a>
+    </footer>
+    <script src="site.js"></script>
+  </body>
+</html>
