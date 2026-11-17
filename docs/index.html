@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <header class="header shell">
       <a class="brand" href="#"><span class="brand-mark">GZ</span><span>toon <span class="muted">/ Preview</span></span></a>
       <nav aria-label="项目导航">
-        <a href="#showcase">作品</a><a href="#features">功能</a><a href="#install">安装</a><a href="https://github.com/Gz-beverage/GZtoon-Preview">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="#showcase">作品</a><a href="#turntable">转盘</a><a href="#features">功能</a><a href="#install">安装</a><a href="https://github.com/Gz-beverage/GZtoon-Preview">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
     <main>
@@ -54,6 +54,20 @@
           </figure>
         </div>
         <p class="showcase-credit">角色「祀」来自《明日方舟：终末地》，模型制作 · 茶叶味香皂。角色与模型相关权利归各自权利方，渲染图用于个人展示与交流。</p>
+      </section>
+      <section class="turntable shell" id="turntable">
+        <div class="section-heading">
+          <h2>360° 转盘</h2><p>拖动查看 · GZtoon 主版 · Unity 实际渲染</p>
+        </div>
+        <figure class="turntable-stage">
+          <div class="turntable-frame" id="turntable-frame">
+            <img id="turntable-image" src="images/turntable/frame_000.jpg" alt="祀的 360 度旋转渲染，可拖动查看" width="1000" height="1000" draggable="false">
+          </div>
+          <div class="turntable-bar">
+            <input id="turntable-range" type="range" min="0" max="71" value="0" step="1" aria-label="旋转角度">
+            <span class="turntable-hint" id="turntable-hint">0°</span>
+          </div>
+        </figure>
       </section>
       <section class="features shell" id="features">
         <div class="section-heading">

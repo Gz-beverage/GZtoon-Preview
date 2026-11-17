@@ -553,6 +553,54 @@ a:focus-visible,button:focus-visible {
   color: var(--muted);
   font-size: 12px;
 }
+.turntable {
+  padding-bottom: 80px;
+}
+.turntable-stage {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+.turntable-frame {
+  position: relative;
+  width: min(620px, 100%);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #3f4858;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.turntable-frame.dragging {
+  cursor: grabbing;
+}
+.turntable-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.turntable-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(620px, 100%);
+}
+.turntable-bar input[type="range"] {
+  flex: 1;
+  accent-color: var(--accent);
+}
+.turntable-hint {
+  min-width: 46px;
+  text-align: right;
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
 .hero-visual img {
   height: auto;
   aspect-ratio: 1;
