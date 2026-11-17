@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -26,7 +26,7 @@
           <p class="eyebrow">Unity 6.3 <span>·</span> URP 17.3</p>
           <h1>GZtoon<br><span>Preview.</span></h1>
           <p class="hero-description">完整的漫反射 Ramp，基础的角色着色。</p>
-          <p class="intro">把基础 PBR、脸部 SDF 与头发 UV 高光放进同一套清晰的材质流程。用少量参数，从明暗关系开始调整角色外观。</p>
+          <p class="intro">把基础 PBR、脸部 SDF 与头发 UV 高光收进同一套材质流程。参数不多，从明暗关系开始，就能把角色的外观调到想要的样子。</p>
           <div class="actions">
             <a class="button primary" href="#install">安装预览版 <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/Gz-beverage/GZtoon-Preview">查看源码 <span aria-hidden="true">↗</span></a>
           </div>
@@ -39,9 +39,21 @@
           </figcaption>
         </figure>
       </section>
+
+      <div class="spec-strip shell">
+        <div><span class="spec-label">管线</span><span>URP 17.3 · Forward</span></div>
+        <div><span class="spec-label">色彩</span><span>Linear · ACES 后处理</span></div>
+        <div><span class="spec-label">材质入口</span><span>Base / Face / Hair</span></div>
+        <div><span class="spec-label">验证环境</span><span>D3D12 · Unity 6.3</span></div>
+      </div>
+
       <section class="showcase shell" id="showcase">
         <div class="section-heading">
-          <h2>渲染展示</h2><p>GZtoon 主版 · Unity 6.3 / URP 17.3</p>
+          <div>
+            <p class="section-index">01 — 作品</p>
+            <h2>同一套材质，<br>不同距离的读感。</h2>
+          </div>
+          <p>全身看剪影与服装层次，半身看发丝、脸部与肩部结构。</p>
         </div>
         <div class="showcase-grid">
           <figure>
@@ -55,13 +67,30 @@
         </div>
         <p class="showcase-credit">角色「祀」来自《明日方舟：终末地》，模型制作 · 茶叶味香皂。角色与模型相关权利归各自权利方，渲染图用于个人展示与交流。</p>
       </section>
+
       <section class="turntable shell" id="turntable">
         <div class="section-heading">
-          <h2>360° 转盘</h2><p>拖动查看 · GZtoon 主版 · Unity 实际渲染</p>
+          <div>
+            <p class="section-index">02 — 转盘</p>
+            <h2>绕一圈，看完整。</h2>
+          </div>
+          <p>拖动画面旋转，滚轮或按钮缩放；三种布光可随时切换。</p>
         </div>
         <figure class="turntable-stage">
           <div class="turntable-frame" id="turntable-frame">
-            <img id="turntable-image" src="images/turntable/frame_000.jpg" alt="祀的 360 度旋转渲染，可拖动查看" width="1000" height="1000" draggable="false">
+            <img id="turntable-image" src="images/turntable/scene/frame_000.jpg" alt="祀的 360 度旋转渲染，可拖动查看" width="1000" height="1000" draggable="false">
+          </div>
+          <div class="turntable-controls">
+            <div class="turntable-tabs" role="group" aria-label="布光预设">
+              <button class="tab is-active" data-set="scene" type="button">场景光</button>
+              <button class="tab" data-set="studio" type="button">影棚光</button>
+              <button class="tab" data-set="rim" type="button">侧逆光</button>
+            </div>
+            <div class="turntable-zoom">
+              <button type="button" id="zoom-out" aria-label="缩小">−</button>
+              <span id="zoom-level">100%</span>
+              <button type="button" id="zoom-in" aria-label="放大">+</button>
+            </div>
           </div>
           <div class="turntable-bar">
             <input id="turntable-range" type="range" min="0" max="71" value="0" step="1" aria-label="旋转角度">
@@ -69,55 +98,43 @@
           </div>
         </figure>
       </section>
+
       <section class="features shell" id="features">
         <div class="section-heading">
-          <h2>从表面，到角色。</h2><p>三个材质入口，共享一套基础光照。</p>
+          <div>
+            <p class="section-index">03 — 功能</p>
+            <h2>从表面，到角色。</h2>
+          </div>
+          <p>三个材质入口，共享一套基础光照。</p>
         </div>
         <div class="feature-grid">
           <article>
             <span class="feature-label">BASE</span><h3>基础 PBR</h3><p>普通法线、粗糙度、金属度与 AO，结合 URP GGX、SH 环境光和反射探针。</p>
             <ul>
-              <li>
-                完整漫反射 Ramp
-              </li>
-              <li>
-                主光、附加灯与原生阴影
-              </li>
-              <li>
-                基础描边与 Alpha 裁剪
-              </li>
+              <li>完整漫反射 Ramp</li>
+              <li>主光、附加灯与原生阴影</li>
+              <li>基础描边与 Alpha 裁剪</li>
             </ul>
           </article>
           <article>
             <span class="feature-label">FACE</span><h3>脸部 SDF</h3><p>基于头部前、右、上方向计算受光，提供左右镜像、明暗偏移和柔软度控制。</p>
             <ul>
-              <li>
-                通用 SDF 阈值
-              </li>
-              <li>
-                独立的头部坐标绑定
-              </li>
-              <li>
-                接入共用 Ramp
-              </li>
+              <li>通用 SDF 阈值</li>
+              <li>独立的头部坐标绑定</li>
+              <li>接入共用 Ramp</li>
             </ul>
           </article>
           <article>
             <span class="feature-label">HAIR</span><h3>UV 高光</h3><p>用贴图控制高光形状，通过 UV 缩放、平移与基础视角位移调整发束表现。</p>
             <ul>
-              <li>
-                高光遮罩与通道选择
-              </li>
-              <li>
-                RG / BA UV 控制图
-              </li>
-              <li>
-                颜色与强度控制
-              </li>
+              <li>高光遮罩与通道选择</li>
+              <li>RG / BA UV 控制图</li>
+              <li>颜色与强度控制</li>
             </ul>
           </article>
         </div>
       </section>
+
       <section class="ramp-section">
         <div class="shell ramp-layout">
           <div>
@@ -131,9 +148,14 @@
           </div>
         </div>
       </section>
+
       <section class="install shell" id="install">
         <div class="section-heading">
-          <h2>安装到你的 URP 项目。</h2><p>通过 Unity Package Manager 导入预览版。</p>
+          <div>
+            <p class="section-index">04 — 安装</p>
+            <h2>装进你的 URP 项目。</h2>
+          </div>
+          <p>通过 Unity Package Manager 导入预览版。</p>
         </div>
         <div class="install-grid">
           <div>
@@ -156,6 +178,7 @@
           </ol>
         </div>
       </section>
+
       <section class="support shell">
         <div>
           <h2>源码与使用说明</h2><p>安装、贴图通道、SDF 绑定与示例场景的详细步骤都在仓库 README 中。</p>

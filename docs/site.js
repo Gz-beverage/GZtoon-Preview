@@ -21,15 +21,22 @@ if (turntableImage) {
   const frame = document.querySelector('#turntable-frame');
   const range = document.querySelector('#turntable-range');
   const hint = document.querySelector('#turntable-hint');
-  const count = 72;
-  const prefix = 'images/turntable/frame_';
-  const frames = Array.from({ length: count }, (_, i) => {
-    const image = new Image();
-    image.src = prefix + String(i).padStart(3, '0') + '.jpg';
-    return image;
-  });
+  const zoomLevel = document.querySelector('#zoom-level');
+  const zoomIn = document.querySelector('#zoom-in');
+  const zoomOut = document.querySelector('#zoom-out');
+  const tabs = Array.from(document.querySelectorAll('.turntable-tabs .tab'));
 
+  const count = 72;
+  const sets = {
+    scene: 'images/turntable/scene/',
+    studio: 'images/turntable/studio/',
+    rim: 'images/turntable/rim/'
+  };
+  const cache = {};
+
+  let activeSet = 'scene';
   let index = 0;
+  let zoom = 1;
   let dragging = false;
   let startX = 0;
   let startIndex = 0;
@@ -38,14 +45,33 @@ if (turntableImage) {
 
   range.max = String(count - 1);
 
+  const framesFor = (name) => {
+    if (!cache[name]) {
+      cache[name] = Array.from({ length: count }, (_, i) => {
+        const image = new Image();
+        image.src = sets[name] + 'frame_' + String(i).padStart(3, '0') + '.jpg';
+        return image;
+      });
+    }
+    return cache[name];
+  };
+
   const render = () => {
+    const frames = framesFor(activeSet);
     turntableImage.src = frames[index].src;
     range.value = String(index);
     hint.textContent = Math.round((index / count) * 360) + '°';
+    turntableImage.style.transform = 'scale(' + zoom.toFixed(2) + ')';
+    zoomLevel.textContent = Math.round(zoom * 100) + '%';
   };
 
   const show = (next) => {
     index = ((next % count) + count) % count;
+    render();
+  };
+
+  const setZoom = (value) => {
+    zoom = Math.min(2.5, Math.max(1, value));
     render();
   };
 
@@ -58,13 +84,14 @@ if (turntableImage) {
 
   const startAuto = () => {
     if (autoTimer) return;
+    if (dragging || zoom > 1) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     autoTimer = setInterval(() => show(index + 1), 90);
   };
 
   const scheduleAuto = () => {
     stopAuto();
-    resumeTimer = setTimeout(startAuto, 2600);
+    resumeTimer = setTimeout(startAuto, 3200);
   };
 
   range.addEventListener('input', () => {
@@ -97,6 +124,29 @@ if (turntableImage) {
 
   frame.addEventListener('pointerup', release);
   frame.addEventListener('pointercancel', release);
+
+  frame.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    stopAuto();
+    setZoom(zoom - event.deltaY * 0.0015);
+    scheduleAuto();
+  }, { passive: false });
+
+  zoomIn.addEventListener('click', () => { stopAuto(); setZoom(zoom + 0.25); scheduleAuto(); });
+  zoomOut.addEventListener('click', () => { stopAuto(); setZoom(zoom - 0.25); scheduleAuto(); });
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const name = tab.dataset.set;
+      if (!name || name === activeSet) return;
+      tabs.forEach((item) => item.classList.toggle('is-active', item === tab));
+      activeSet = name;
+      framesFor(name);
+      stopAuto();
+      render();
+      scheduleAuto();
+    });
+  });
 
   render();
 
