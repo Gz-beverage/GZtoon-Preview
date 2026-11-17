@@ -10,9 +10,9 @@ Stylized character rendering for Unity URP. Full-edition feature overview with a
 
 ## 渲染展示
 
-祀 · GZtoon 主版在 Unity 6.3 / URP 17.3 中的实际渲染。展示页提供可拖动的 360° 转盘。
+祀 · GZtoon 主版在 Unity 6.3 / URP 17.3 中的实际渲染。更多近景与全身图见[展示页](https://gz-beverage.github.io/GZtoon-Preview/)。
 
-<img src="docs/images/showcase-portrait.jpg" width="640" alt="祀 面部近景，GZtoon 主版的实际渲染">
+<img src="docs/images/hero.jpg" width="640" alt="祀 面部近景，GZtoon 主版的实际渲染">
 
 ## 完全版功能
 
