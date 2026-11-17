@@ -6,86 +6,75 @@
     <meta name="description" content="GZtoon Preview — Unity URP 角色着色预览版，完整漫反射 Ramp、基础 PBR、脸部 SDF、头发 UV 高光和原生后处理。">
     <meta property="og:title" content="GZtoon Preview">
     <meta property="og:description" content="完整的漫反射 Ramp，基础的角色着色。Unity 6.3 / URP 17.3。">
-    <meta property="og:image" content="https://gz-beverage.github.io/GZtoon-Preview/images/hero.jpg">
+    <meta property="og:image" content="https://gz-beverage.github.io/GZtoon-Preview/images/renders/render-front.jpg">
     <title>GZtoon Preview · Unity URP 角色着色</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="header shell">
+    <header class="header">
       <a class="brand" href="#"><span class="brand-mark">GZ</span><span>toon <span class="muted">/ Preview</span></span></a>
       <nav aria-label="项目导航">
-        <a href="#gallery">作品</a><a href="#features">功能</a><a href="#install">安装</a><a href="https://github.com/Gz-beverage/GZtoon-Preview">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="#renders">渲染</a><a href="#features">功能</a><a href="#install">安装</a><a href="https://github.com/Gz-beverage/GZtoon-Preview">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main>
-      <section class="hero shell">
-        <div class="hero-copy">
-          <p class="eyebrow">Unity 6.3 <span>·</span> URP 17.3</p>
-          <h1>GZtoon<br><span>Preview.</span></h1>
-          <p class="hero-description">完整的漫反射 Ramp，基础的角色着色。</p>
-          <p class="intro">基础 PBR、脸部 SDF 与头发 UV 高光共用一套材质流程。参数不多，从明暗关系开始，就能把角色调到想要的样子。</p>
-          <div class="actions">
-            <a class="button primary" href="#install">安装预览版 <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/Gz-beverage/GZtoon-Preview">查看源码 <span aria-hidden="true">↗</span></a>
-          </div>
-          <p class="version">v0.1.0-preview.1 <span>·</span> MIT License</p>
+      <section class="intro">
+        <p class="eyebrow">Unity 6.3 · URP 17.3</p>
+        <h1>GZtoon<br><span>Preview.</span></h1>
+        <p class="lead">完整的漫反射 Ramp，基础的角色着色。基础 PBR、脸部 SDF 与头发 UV 高光共用一套材质流程。</p>
+        <div class="actions">
+          <a class="button" href="#install">安装预览版 <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/Gz-beverage/GZtoon-Preview">查看源码 <span aria-hidden="true">↗</span></a>
         </div>
-        <figure class="hero-visual">
-          <a href="images/hero.jpg" aria-label="查看近景渲染原图"><img src="images/hero.jpg" alt="祀的近景渲染，GZtoon 主版在 Unity 中的实际渲染" width="1600" height="2000" fetchpriority="high"></a>
-          <figcaption><span>GZtoon 主版 · Unity 实际渲染</span><span>近景</span></figcaption>
-        </figure>
+        <dl class="specs">
+          <div><dt>管线</dt><dd>URP 17.3 · Forward</dd></div>
+          <div><dt>色彩</dt><dd>Linear · ACES</dd></div>
+          <div><dt>材质入口</dt><dd>Base / Face / Hair</dd></div>
+          <div><dt>版本</dt><dd>v0.1.0-preview.1 · MIT</dd></div>
+        </dl>
       </section>
 
-      <div class="spec-strip shell">
-        <div><span class="spec-label">管线</span><span>URP 17.3 · Forward</span></div>
-        <div><span class="spec-label">色彩</span><span>Linear · ACES 后处理</span></div>
-        <div><span class="spec-label">材质入口</span><span>Base / Face / Hair</span></div>
-        <div><span class="spec-label">验证环境</span><span>D3D12 · Unity 6.3</span></div>
-      </div>
+      <section class="renders" id="renders">
+        <div class="render-head">
+          <p class="eyebrow">RENDERS</p>
+          <h2>渲染效果</h2>
+          <p class="render-game">明日方舟：终末地 · 祀</p>
+          <p class="render-note">Unity 6.3 / URP 17.3 实机渲染，未做后期修图。</p>
+        </div>
 
-      <section class="gallery shell" id="gallery">
-        <div class="section-heading">
-          <div>
-            <p class="section-index">01 — 作品</p>
-            <h2>同一套材质，<br>不同距离的读感。</h2>
-          </div>
-          <p>脸部看 SDF 与眼睛分区，半身看发丝与肩部结构，全身看服装层次与剪影。</p>
-        </div>
-        <div class="gallery-grid">
-          <figure class="wide">
-            <a href="images/pose-point.jpg" aria-label="查看挥臂姿态原图"><img src="images/pose-point.jpg" alt="祀的挥臂姿态，展示发丝、肩部与服装材质" width="1400" height="1750" loading="lazy" decoding="async"></a>
-            <figcaption><b>挥臂</b>发丝走向、袖口与肩甲的高光层次</figcaption>
+        <div class="render-column">
+          <figure>
+            <img src="images/renders/render-front.jpg" alt="祀的正面近景，脸部 SDF 与 Ramp 的表现" width="1152" height="1440" loading="eager" decoding="async">
+            <figcaption><b>正面</b>脸部 SDF 的明暗切换、眼睛分区与发丝高光。</figcaption>
           </figure>
           <figure>
-            <a href="images/detail-face.jpg" aria-label="查看脸部近景原图"><img src="images/detail-face.jpg" alt="祀的脸部近景，展示脸部 SDF 与眼睛分区" width="1400" height="1400" loading="lazy" decoding="async"></a>
-            <figcaption><b>脸部</b>脸部 SDF、眼睛分区与发丝遮盖</figcaption>
+            <img src="images/renders/render-side.jpg" alt="祀的侧面近景，头部与肩部的体积表现" width="1152" height="1440" loading="lazy" decoding="async">
+            <figcaption><b>侧面</b>Ramp 在侧光下的分级，以及描边的粗细变化。</figcaption>
           </figure>
           <figure>
-            <a href="images/pose-arms.jpg" aria-label="查看展臂姿态原图"><img src="images/pose-arms.jpg" alt="祀的展臂姿态，展示全身服装与材质" width="1400" height="1750" loading="lazy" decoding="async"></a>
-            <figcaption><b>展臂</b>全身服装层次与描边</figcaption>
-          </figure>
-          <figure class="wide">
-            <a href="images/full-body.jpg" aria-label="查看全身站姿原图"><img src="images/full-body.jpg" alt="祀的全身站姿，展示服装、头发与材质" width="1200" height="1600" loading="lazy" decoding="async"></a>
-            <figcaption><b>全身</b>明暗关系与 Ramp 在整体上的分布</figcaption>
+            <img src="images/renders/render-back.jpg" alt="祀的背面，头发与披风的层次" width="1152" height="1440" loading="lazy" decoding="async">
+            <figcaption><b>背面</b>头发的层次、披风的明暗与背面描边。</figcaption>
           </figure>
         </div>
-        <p class="showcase-credit">角色「祀」来自《明日方舟：终末地》，模型制作 · 茶叶味香皂。角色与模型相关权利归各自权利方，渲染图用于个人展示与交流。</p>
+
+        <p class="credit">角色「祀」来自《明日方舟：终末地》，模型制作 · 茶叶味香皂。角色与模型相关权利归各自权利方，渲染图用于个人展示与交流。</p>
       </section>
 
-      <section class="features shell" id="features">
-        <div class="section-heading">
-          <div>
-            <p class="section-index">02 — 功能</p>
-            <h2>从表面，到角色。</h2>
-          </div>
+      <section class="features" id="features">
+        <div class="section-head">
+          <p class="eyebrow">FEATURES</p>
+          <h2>从表面，到角色。</h2>
           <p>三个材质入口，共享一套基础光照。</p>
         </div>
         <div class="feature-grid">
           <article>
-            <span class="feature-label">BASE</span><h3>基础 PBR</h3><p>普通法线、粗糙度、金属度与 AO，结合 URP GGX、SH 环境光和反射探针。</p>
+            <span class="label">BASE</span>
+            <h3>基础 PBR</h3>
+            <p>普通法线、粗糙度、金属度与 AO，结合 URP GGX、SH 环境光和反射探针。</p>
             <ul>
               <li>完整漫反射 Ramp</li>
               <li>主光、附加灯与原生阴影</li>
@@ -93,7 +82,9 @@
             </ul>
           </article>
           <article>
-            <span class="feature-label">FACE</span><h3>脸部 SDF</h3><p>基于头部前、右、上方向计算受光，提供左右镜像、明暗偏移和柔软度控制。</p>
+            <span class="label">FACE</span>
+            <h3>脸部 SDF</h3>
+            <p>基于头部前、右、上方向计算受光，提供左右镜像、明暗偏移和柔软度控制。</p>
             <ul>
               <li>通用 SDF 阈值</li>
               <li>独立的头部坐标绑定</li>
@@ -101,7 +92,9 @@
             </ul>
           </article>
           <article>
-            <span class="feature-label">HAIR</span><h3>UV 高光</h3><p>用贴图控制高光形状，通过 UV 缩放、平移与基础视角位移调整发束表现。</p>
+            <span class="label">HAIR</span>
+            <h3>UV 高光</h3>
+            <p>用贴图控制高光形状，通过 UV 缩放、平移与基础视角位移调整发束表现。</p>
             <ul>
               <li>高光遮罩与通道选择</li>
               <li>RG / BA UV 控制图</li>
@@ -111,54 +104,52 @@
         </div>
       </section>
 
-      <section class="ramp-section">
-        <div class="shell ramp-layout">
-          <div>
-            <p class="eyebrow">DIFFUSE RAMP</p><h2>明暗关系，<br>集中在一条色带里。</h2><p>固定 LOD 0 查表，配合区域遮罩、Y 选行与静态 IGN 抖动，让不同部位共用明确的明暗流程。</p>
-          </div>
-          <div class="ramp-details">
-            <img src="images/ramp.png" alt="默认 Ramp 的四组色带" class="ramp-image">
-            <div class="detail-grid">
-              <p><strong>输入</strong>明暗起终点、分级图、原生阴影与 AO</p><p><strong>查表</strong>固定 Y、Y 贴图、区域遮罩与抖动</p><p><strong>颜色</strong>曝光、色相、饱和度、对比度、Gamma 与染色</p><p><strong>后处理</strong>原生 Bloom、Neutral Tonemapping 与颜色调整</p>
-            </div>
-          </div>
+      <section class="ramp">
+        <div class="ramp-copy">
+          <p class="eyebrow">DIFFUSE RAMP</p>
+          <h2>明暗关系，<br>集中在一条色带里。</h2>
+          <p>固定 LOD 0 查表，配合区域遮罩、Y 选行与静态 IGN 抖动，让不同部位共用明确的明暗流程。</p>
+        </div>
+        <div class="ramp-visual">
+          <img src="images/ramp.png" alt="默认 Ramp 的四组色带" width="512" height="64">
+          <dl>
+            <div><dt>输入</dt><dd>明暗起终点、分级图、原生阴影与 AO</dd></div>
+            <div><dt>查表</dt><dd>固定 Y、Y 贴图、区域遮罩与抖动</dd></div>
+            <div><dt>颜色</dt><dd>曝光、色相、饱和度、对比度与 Gamma</dd></div>
+            <div><dt>后处理</dt><dd>Bloom、Neutral Tonemapping 与颜色调整</dd></div>
+          </dl>
         </div>
       </section>
 
-      <section class="install shell" id="install">
-        <div class="section-heading">
-          <div>
-            <p class="section-index">03 — 安装</p>
-            <h2>装进你的 URP 项目。</h2>
-          </div>
+      <section class="install" id="install">
+        <div class="section-head">
+          <p class="eyebrow">INSTALL</p>
+          <h2>装进你的 URP 项目。</h2>
           <p>通过 Unity Package Manager 导入预览版。</p>
         </div>
         <div class="install-grid">
           <div>
-            <h3>从 Git URL 安装</h3><p>打开 Package Manager，选择 <b>Install package from git URL</b>，粘贴地址。</p>
+            <h3>从 Git URL 安装</h3>
+            <p>打开 Package Manager，选择 <b>Install package from git URL</b>，粘贴地址。</p>
             <div class="code-box">
-              <code id="git-url">https://github.com/Gz-beverage/GZtoon-Preview.git#v0.1.0-preview.1</code><button id="copy-url" type="button">复制地址</button>
+              <code id="git-url">https://github.com/Gz-beverage/GZtoon-Preview.git#v0.1.0-preview.1</code>
+              <button id="copy-url" type="button">复制</button>
             </div>
-            <p class="copy-status" id="copy-status" aria-live="polite"></p><a class="text-link" href="https://github.com/Gz-beverage/GZtoon-Preview/releases">下载版本 <span aria-hidden="true">↗</span></a>
+            <p class="copy-status" id="copy-status" aria-live="polite"></p>
           </div>
-          <ol class="setup-steps">
-            <li><h3>创建材质</h3><p>Create → GZtoon Preview，选择 Base、Face 或 Hair，指定底色、材质贴图与 Ramp。</p></li>
-            <li><h3>配置描边与头部</h3><p>Tools → GZtoon Preview 安装描边。脸部通过 Preview Head Basis 绑定头部 Transform 与 Renderer。</p></li>
-            <li><h3>打开示例与后处理</h3><p>导入 Basic Demo，或创建基础 Volume，在原生 Inspector 中调整 Bloom、曝光和饱和度。</p></li>
+          <ol class="steps">
+            <li><h3>创建材质</h3><p>Create → GZtoon Preview，选 Base / Face / Hair，指定底色、贴图与 Ramp。</p></li>
+            <li><h3>描边与头部</h3><p>Tools → GZtoon Preview 安装描边；脸部用 Preview Head Basis 绑定头部。</p></li>
+            <li><h3>示例与后处理</h3><p>导入 Basic Demo，或创建 Volume 调整 Bloom、曝光与饱和度。</p></li>
           </ol>
         </div>
       </section>
-
-      <section class="support shell">
-        <div>
-          <h2>源码与使用说明</h2><p>安装、贴图通道、SDF 绑定与示例场景的详细步骤都在仓库 README 中。</p>
-        </div>
-        <a class="button secondary" href="https://github.com/Gz-beverage/GZtoon-Preview#readme">阅读文档 <span aria-hidden="true">↗</span></a>
-      </section>
     </main>
 
-    <footer class="shell">
-      <a class="brand" href="#">GZtoon <span class="muted">Preview</span></a><p>© 2026 GZ007 · MIT License</p><a href="https://github.com/Gz-beverage/GZtoon-Preview/issues">反馈问题 ↗</a>
+    <footer>
+      <a class="brand" href="#"><span class="brand-mark">GZ</span><span>toon <span class="muted">Preview</span></span></a>
+      <p>© 2026 GZ007 · MIT License</p>
+      <a href="https://github.com/Gz-beverage/GZtoon-Preview/issues">反馈问题 ↗</a>
     </footer>
     <script src="site.js"></script>
   </body>
