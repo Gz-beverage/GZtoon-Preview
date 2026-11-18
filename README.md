@@ -12,7 +12,7 @@ Stylized character rendering for Unity URP. Full-edition feature overview with a
 
 祀 · GZtoon 主版在 Unity 6.3 / URP 17.3 中的实际渲染。展示页按游戏分组展示渲染效果，后续会继续加入其他项目。
 
-<img src="docs/images/renders/render-front.jpg" width="640" alt="祀 面部近景，GZtoon 主版的实际渲染">
+<img src="docs/images/renders/render-side.jpg" width="640" alt="祀 面部近景，GZtoon 主版的实际渲染">
 
 ## 完全版功能
 
