@@ -1,4 +1,4 @@
-# GZtoon
+﻿# GZtoon
 
 面向 Unity 6.3 / URP 17.3 的风格化角色渲染体系，围绕 PBR、漫反射 Ramp、脸部 SDF、眼睛、头发、角色阴影与后处理组织材质流程。
 
@@ -7,12 +7,6 @@
 Stylized character rendering for Unity URP. Full-edition feature overview with a downloadable Preview package.
 
 [下载 Preview](https://github.com/Gz-beverage/GZtoon-Preview/releases) · [Preview 安装与使用](#preview-预览包) · [反馈问题](https://github.com/Gz-beverage/GZtoon-Preview/issues)
-
-## 渲染展示
-
-祀 · GZtoon 主版在 Unity 6.3 / URP 17.3 中的实际渲染。展示页按游戏分组展示渲染效果，后续会继续加入其他项目。
-
-<img src="docs/images/renders/render-side.jpg" width="640" alt="祀 面部近景，GZtoon 主版的实际渲染">
 
 ## 完全版功能
 
@@ -125,6 +119,12 @@ Stylized character rendering for Unity URP. Full-edition feature overview with a
 - 整体材质、部位、光照、透明度、Ramp／FGD 与后处理预设。
 - 角色高／中／低品质材质配置，按占屏高度切换，并控制绒毛壳层数量。
 - Shader 预编译、构建功能清单、工程配置诊断、材质引用快照与旧属性迁移。
+
+## 渲染展示
+
+祀 · GZtoon 主版在 Unity 6.3 / URP 17.3 中的实际渲染。展示页按游戏分组展示渲染效果，后续会继续加入其他项目。
+
+<img src="docs/images/renders/render-side.jpg" width="640" alt="祀 面部近景，GZtoon 主版的实际渲染">
 
 ## Preview 预览包
 
